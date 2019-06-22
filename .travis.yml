@@ -3,18 +3,20 @@ jdk: oraclejdk11
 
 branches:
   only:
-    - develop
-    - master
-
+  - develop
+  - master
+  -
 before_install:
-  - chmod +x mvnw
-
+- chmod +x mvnw
+-
 deploy:
   provider: cloudfoundry
   username: polushan@yandex.ru
-  password: $cf-password
   api: https://api.run.pivotal.io
   organization: PingPong
   space: development
   manifest: manifest.yml
   app_name: ping-service
+env:
+  global:
+    secure: nVVy0S5O5JyihNJgea8QS8F58oAETkF7mqEq/UiwKK8cvwRZbWg1mn/MN0fb8VPjl+VzpqVW545tuO8O0uLjJRXabBv28U9pSnwKoE5zHt5PXYa4S7myj9D6atpKgJ6v6K365I1xdiEnTIqlyswpRCTzSg0F3BwmVs2iiG6x3yHLPR2p9f0K2WmhC8B3yDfVF0chtDuJ8ycHFdne+20Yd0hYfQScwguMEG3JTQiRiHRWv0RlHkQlKqRJsFsTJ8sKBXA4Y2TSobMSx9sTAVgqdiA9gZ/P2hTnXAIC/L/wEEHgWknqT7UbEBXJ3zxSzf9CKrfRAg9DNpsVxVqXdyMi+FGx+A0TscUhW7wET7dvRX+o8GAN6zfcYaBk/g9E0y9usOpv38I4JN9E15MYtx0slgRX7Qd9M7hRnBENUiRi9aag2aPyxw155D1CLuz9ujOlAz2Wx0d8vytEHUe2cOAl1e1Th1M/HsPcEX+CPYxI1TPcFR/KzofdnhaomcbLNMfGiWFbIVkt0/emIiAMVzPp213iDu9Nmbs1hGsUa6xpvD0aS68JY1FCnbwWorljcZqLCBwCpJ8mINIHb4Czjue97HZaTNFtR55Y6MUg2/w5fj0A2fmjKuQH1ZCkmt7aXn9sOq4YA9/bDurZpJcdwWVRxNc+2IH/iSQ68S+duaPk9Z8=
