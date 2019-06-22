@@ -5,10 +5,10 @@ branches:
   only:
   - develop
   - master
-  -
+
 before_install:
 - chmod +x mvnw
--
+
 deploy:
   provider: cloudfoundry
   username: polushan@yandex.ru
@@ -17,6 +17,7 @@ deploy:
   space: development
   manifest: manifest.yml
   app_name: ping-service
-env:
-  global:
-    secure: nVVy0S5O5JyihNJgea8QS8F58oAETkF7mqEq/UiwKK8cvwRZbWg1mn/MN0fb8VPjl+VzpqVW545tuO8O0uLjJRXabBv28U9pSnwKoE5zHt5PXYa4S7myj9D6atpKgJ6v6K365I1xdiEnTIqlyswpRCTzSg0F3BwmVs2iiG6x3yHLPR2p9f0K2WmhC8B3yDfVF0chtDuJ8ycHFdne+20Yd0hYfQScwguMEG3JTQiRiHRWv0RlHkQlKqRJsFsTJ8sKBXA4Y2TSobMSx9sTAVgqdiA9gZ/P2hTnXAIC/L/wEEHgWknqT7UbEBXJ3zxSzf9CKrfRAg9DNpsVxVqXdyMi+FGx+A0TscUhW7wET7dvRX+o8GAN6zfcYaBk/g9E0y9usOpv38I4JN9E15MYtx0slgRX7Qd9M7hRnBENUiRi9aag2aPyxw155D1CLuz9ujOlAz2Wx0d8vytEHUe2cOAl1e1Th1M/HsPcEX+CPYxI1TPcFR/KzofdnhaomcbLNMfGiWFbIVkt0/emIiAMVzPp213iDu9Nmbs1hGsUa6xpvD0aS68JY1FCnbwWorljcZqLCBwCpJ8mINIHb4Czjue97HZaTNFtR55Y6MUg2/w5fj0A2fmjKuQH1ZCkmt7aXn9sOq4YA9/bDurZpJcdwWVRxNc+2IH/iSQ68S+duaPk9Z8=
+  on:
+    branch: master
+  password:
+    secure: sqIcyxioW0IsNZsjRXLn0wa0TS+PTVF6WiDLvU79KE8o4Ie6W9k9V5fewHyb99YATJ9qjoL79YcUlGcjtKVAhVnWMau1Vww2FCA3rHa0iuWtrMBqrgCNrYDdwTPtw9pO2L5S4o87zRUetmm73stcIgriMgDbe0BWiRgzMhq9bPToV/0icgsoDMSZfRUudszt+cDmEEE2d6DyNwlZvwzxAkZQGSmYnFdMXsUKoUBsrkC1jrlWeSF66RZnqIDPEMiYgrQ4SqDDjea+QNqaTvx7yR20krRdKMbv3Zj8AdhCPE6/U7KxZQ04C8Ec/4LeScVLXvHlPoV806Nu/dLs0u7Ou3+tT8hcJhPQQl4Gxwvl0L7NQyFaNQw6/1onJkD1NkJnuSYu67KZjjcnGo1KyyEJFkAK5w3Ewe4hube0xVSbL5f3oSCrSmxsD6IEBvshdXwG//O6u5XfhW7TEjTRBblnpTl6MGETCMkFMk+z5fMG7cl2tRSSrpkCOIXxZN7FQ6Wd/KOhVT8QcaeSxKZDDmmVmqR1bRv6MsYlaX9uhsr2SdS8iKbF6u1/6QCKhLFnd87AtWlerT7Cevu1MwLT3IbvhWVJg5oYwxkbl1Vm8yYm0zgTKxtxnF74uDutbqV5XCnLNf0EPYRAp1sImN05FVpLKOoPsbuGRLLs/PhrMix4x3c=
