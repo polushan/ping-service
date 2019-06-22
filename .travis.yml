@@ -6,8 +6,8 @@ branches:
     - develop
     - master
 
-script:
-  - mvn clean install
+before_install:
+  - chmod +x mvnw
 
 deploy:
   provider: cloudfoundry
