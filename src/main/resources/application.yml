@@ -5,4 +5,4 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-cheerful-fox.cfapps.io/eureka/
   instance:
-    hostname: ${vcap.application.uris[0]}
+    hostname: ping-service.cfapps.io
