@@ -5,7 +5,10 @@ eureka:
     serviceUrl:
       defaultZone: https://pingpong-discovery.herokuapp.com/eureka
   instance:
-    hostname: cloud-ping-service.herokuapp.com
+#    hostname: cloud-ping-service.herokuapp.com
+    preferIpAddress: true
+    nonSecurePortEnabled: false
+    securePortEnabled: false
 
 feign:
   hystrix:
