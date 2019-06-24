@@ -5,7 +5,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "pong-service", fallbackFactory = PongClient.PongClientFallbackFactory.class)
+@FeignClient(name = "pong-service", url = "${pong.host}",
+        fallbackFactory = PongClient.PongClientFallbackFactory.class)
 public interface PongClient {
 
     @GetMapping("/pong")

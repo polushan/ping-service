@@ -3,13 +3,13 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: https://pingpong-discovery.herokuapp.com/eureka
+      defaultZone: https://discovery-cheerful-fox.cfapps.io/eureka
   instance:
-#    hostname: cloud-ping-service.herokuapp.com
-    preferIpAddress: true
-    nonSecurePortEnabled: false
-    securePortEnabled: false
+    hostname: ${vcap.application.uris[0]}
 
 feign:
   hystrix:
     enabled: true
+
+pong:
+  host: https://pong-service-happy-kob.cfapps.io
