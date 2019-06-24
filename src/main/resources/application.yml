@@ -4,3 +4,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: https://pingpong-discovery.herokuapp.com/eureka
+
+feign:
+  hystrix:
+    enabled: true
