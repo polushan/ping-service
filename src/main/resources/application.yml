@@ -6,11 +6,9 @@ eureka:
       defaultZone: https://discovery-cheerful-fox.cfapps.io/eureka
   instance:
     hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
+    nonSecurePortEnabled: false
+    securePortEnabled: true
 
 feign:
   hystrix:
     enabled: true
-
-pong:
-  host: https://pong-service-happy-kob.cfapps.io
