@@ -4,6 +4,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: https://pingpong-discovery.herokuapp.com/eureka
+  instance:
+    hostname: cloud-ping-service.herokuapp.com
 
 feign:
   hystrix:
