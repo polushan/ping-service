@@ -12,3 +12,10 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+spring:
+  rabbitmq:
+    host: spider-01.rmq.cloudamqp.com
+    virtual-host: nhsbsmng
+    username: nhsbsmng
+    password: hJq4gSoszGqS1O1Vdl8ygtdNY5s6g8WF
