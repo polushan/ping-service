@@ -6,4 +6,5 @@ applications:
   path: target/ping-service-0.0.1-SNAPSHOT.jar
   memory: 512m
   env:
+    JAVA_OPTS: '-Xmx400M'
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'
