@@ -19,3 +19,8 @@ spring:
     virtual-host: nhsbsmng
     username: nhsbsmng
     password: hJq4gSoszGqS1O1Vdl8ygtdNY5s6g8WF
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: ping-pong

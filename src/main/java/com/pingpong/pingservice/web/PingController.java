@@ -27,7 +27,7 @@ public class PingController {
     @GetMapping
     public ResponseEntity<String>  ping() {
         String uuid = UUID.randomUUID().toString();
-        log.info(uuid+ " ping");
+        log.info(uuid + " ping");
         String pong = pongClient.pong();
         String pingPong = uuid + " ping " + pong;
         if (eventService.send(pingPong)) {
