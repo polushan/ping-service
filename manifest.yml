@@ -4,7 +4,6 @@ applications:
   random-route: true
   instance: 1
   path: target/ping-service-0.0.1-SNAPSHOT.jar
-  memory: 256m
+  memory: 512m
   env:
-    JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'
