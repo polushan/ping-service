@@ -1,5 +1,6 @@
 package com.pingpong.pingservice.event;
 
+import com.pingpong.pingservice.web.PingPong;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
@@ -16,7 +17,7 @@ public class PingPongEventService {
         this.source = source;
     }
 
-    public boolean send(String pingPong) {
+    public boolean send(PingPong pingPong) {
         return this.source.output().send(MessageBuilder.withPayload(pingPong).build());
     }
 }

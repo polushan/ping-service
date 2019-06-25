@@ -24,15 +24,13 @@ public class PingController {
         this.eventService = eventService;
     }
 
-    @GetMapping
-    public ResponseEntity<String>  ping() {
+    @GetMapping(produces = "application/json")
+    public ResponseEntity<PingPong> ping() {
         String uuid = UUID.randomUUID().toString();
         log.info(uuid + " ping");
         String pong = pongClient.pong();
-        String pingPong = uuid + " ping " + pong;
-        if (eventService.send(pingPong)) {
-            return ResponseEntity.ok(pingPong);
-        }
-        return ResponseEntity.ok("event failed: " + pingPong);
+        PingPong pingPong = new PingPong(uuid, "ping", pong);
+        eventService.send(pingPong);
+        return ResponseEntity.ok(pingPong);
     }
 }
