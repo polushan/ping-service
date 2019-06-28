@@ -1,3 +1,6 @@
 spring:
   application:
     name: ping-service
+  cloud:
+    config:
+      uri: https://config-service-patient-quoll.cfapps.io/
